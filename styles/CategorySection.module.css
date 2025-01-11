@@ -1,0 +1,165 @@
+.categorySection {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #000;
+}
+
+.categorySection h2 {
+    color: #fff;
+    font-family: Lucida handwriting;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.categoryCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    height: 400px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.categoryCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.categoryCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    z-index: 1;
+}
+
+.categoryCard:hover .overlay {
+    opacity: 1;
+}
+
+.shopButton {
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: Lucida Handwriting;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shopButton:hover {
+    background-color: #ff69b4;
+}
+
+@media (max-width: 768px) {
+    .categoryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .categoryGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.popUpImages {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.categoryCard:hover .overlay:hover + .popUpImages {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popUpImages img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.popUpImages img:nth-child(1) {
+    position: absolute;
+    top: -110px;
+    left: -110px;
+    transform: translate(-50%, -50%);
+}
+
+.popUpImages img:nth-child(2) {
+    position: absolute;
+    top: -110px;
+    right: -110px;
+    transform: translate(50%, -50%);
+}
+
+.popUpImages img:nth-child(3) {
+    position: absolute;
+    bottom: -110px;
+    left: -110px;
+    transform: translate(-50%, 50%);
+}
+
+.popUpImages img:nth-child(4) {
+    position: absolute;
+    bottom: -110px;
+    right: -110px;
+    transform: translate(50%, 50%);
+}
+
+.categoryCard:hover img[src="/Images/Sarees/photo-1716504628105-bd76d91e85f2.avif"],
+.categoryCard:hover img[src="/Images/Salwar/free-photo-of-model-in-a-gray-dress-with-purple-embroidery.jpeg"],
+.categoryCard:hover img[src="/Images/Lehengas/free-photo-of-portrait-of-smiling-woman-in-traditional-clothing.jpeg"] {
+    filter: blur(5px);
+    transform: scale(1.1) rotateY(10deg) rotateX(10deg);
+}
+
+.categoryCard:hover img {
+    transform: scale(1.1) rotateY(10deg) rotateX(10deg);
+}
+
+.popUpImages img[src="/Images/Sarees/photo-1736374143053-cb070a404533.avif"],
+.popUpImages img[src="/Images/Sarees/photo-1615886753866-79396abc446e.avif"],
+.popUpImages img[src="/Images/Sarees/photo-1610030469978-6bb537f3b982.avif"],
+.popUpImages img[src="/Images/Sarees/photo-1609748340041-f5d61e061ebc.avif"],
+.popUpImages img[src="/Images/Salwar/free-photo-of-model-in-a-floral-purple-dress-with-embroidery.jpeg"],
+.popUpImages img[src="/Images/Salwar/free-photo-of-model-in-embroidered-gray-dress-and-scarf.jpeg"],
+.popUpImages img[src="/Images/Lehengas/pexels-photo-2053852.jpeg"],
+.popUpImages img[src="/Images/Lehengas/pexels-photo-2106685.jpeg"],
+.popUpImages img[src="/Images/Lehengas/pexels-photo-12737572.jpeg"],
+.popUpImages img[src="/Images/Lehengas/pexels-photo-12737595.jpeg"] {
+    filter: none;
+}

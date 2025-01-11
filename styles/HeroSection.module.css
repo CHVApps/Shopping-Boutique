@@ -1,0 +1,37 @@
+
+/* Hero container */
+.heroContainer {
+    position: relative;
+    padding-left: -100px;
+    width: 100%;
+    margin-top: 72px; /* Ensure the video starts below the navbar */
+   
+    margin: 0;
+    box-sizing: border-box;
+    height: calc(100vh - 72px); /* Set the height to be the full viewport minus navbar */
+}
+
+/* Video section */
+.heroVideo {
+    margin-top: 72px;
+    width: 100%; /* Ensure the video spans the full width of the screen */
+    height: 100%; /* Fill the full height of the container */
+    object-fit: cover; /* Ensures the video covers the space */
+    background-image: linear-gradient(rgba(4, 21, 30, 0.4), rgba(4, 21, 30, 0)), url("https://media.wired.com/photos/59d3b570b828a21de366b082/16:9/w_2560,c_limit/HHLEAD.png");
+    position: absolute; /* To cover the entire area without stretching */
+    padding-left: -10px;
+}
+
+/* Overlay text on video */
+.overlayText {
+    position: absolute;
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+    z-index: 10;
+}

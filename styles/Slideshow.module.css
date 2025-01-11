@@ -1,0 +1,33 @@
+.slideshowContainer {
+    position: relative;
+    max-width: 100%;
+    margin: 40px auto; 
+    overflow: hidden; 
+    height: 600px;
+    border-radius: 10px; 
+  }
+  
+  .slideshowImages {
+    display: flex;
+    transition: transform 1s ease; 
+    width: 100%;
+  }
+  
+  .slideshowImage {
+    flex: 1 0 100%;
+    object-fit: cover; 
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .slideshowContainer {
+      height: 300px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slideshowContainer {
+      height: 400px;
+    }
+  }
+  
